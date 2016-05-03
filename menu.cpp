@@ -6,12 +6,13 @@ using namespace std;
 int main()
 {
     int choice = 0;
+    string name;
     Music m(10);
     //Song playlist[20];
 
     cout << "Welcome!" <<endl;
 
-    while(choice != 7){
+    while(choice < 7){
     cout<<" "<<endl;
     cout << "Choose one of the following:" << endl;
     cout << "1. Add a song to your favorite playlist" << endl;
@@ -27,11 +28,11 @@ int main()
 
     if(choice == 1)
     {
-        string name;
+        //string name;
         cout << "Enter the title of the song: ";
-        cin >> name;
-        string junk;
-        getline(cin,junk);
+       // cin >> name;
+        //string junk;
+        getline(cin,name);
         m.AddToPlaylist(name);
     }
     else if(choice == 2)
@@ -42,9 +43,9 @@ int main()
     {
         string title;
         cout<<"Enter the song you'd like to add to up next: ";
-        cin>>title;
-        string junk;
-        getline(cin,junk);
+        //cin>>title;
+       // string junk;
+        getline(cin,title);
         m.AddToUpNext(title);
     }
     else if(choice == 4)
@@ -58,9 +59,9 @@ int main()
     else if(choice == 6){
         cout<<"Enter song you wish to search for: ";
         string name;
-        cin>>name;
-        string junk;
-        getline(cin,junk);
+        //cin>>name;
+        //string junk;
+        getline(cin,name);
         m.searchPlaylist(name);
     }
     }
